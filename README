@@ -1,0 +1,9 @@
+Simple wrapper for representing memory area as STL-like container
+
+Example:
+
+char * data = new char[20 * sizeof(double)];
+ml::container<double> dbl_array(data,20);
+for(ml::container<double>::iterator it=dbl_array.begin(); it != dbl_array.end(); ++it) {
+    *it = 0.0;
+}
